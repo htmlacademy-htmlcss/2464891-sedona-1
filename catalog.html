@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link type="Image/x-icon" href="../my_project_Sedona/images/favicon.png" rel="icon">
 </head>
+
 <body>
   <header class="page-header">
-    <a aria-current="page" href="index.html">
+    <a aria-current="page">
       <img class="logo" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип города СЕДОНА">
     </a>
     <nav class="navigation">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a class="navigation-link" href="index.html">Главная</a>
+          <a class="navigation-link navigation-link-current" href="#">Главная</a>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">О Седона</a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-link navigation-link-current" href="#">Гостинницы</a>
+          <a class="navigation-link" href="catalog.html">Гостиницы</a>
         </li>
       </ul>
     </nav>
@@ -37,15 +40,14 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a class="navigation-button" href="#">Хочу сюда!</a>
+          <a class="navigation-link navigation-button" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
   </header>
   <main class="main-catalog">
-    <h1 class="catalog-title">Гостинницы Седоны</h1>
     <section class="catalog-products">
-      <h2 class="visually-hidden">Поиск гостинниц</h2>
+      <h1 class="catalog-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
@@ -54,14 +56,15 @@
           </a>
         </li>
         <li class="breadcrumbs-item">
-          <img class="breadcrumbs-img" src="images/catalog/breadcrumbs-arrow.svg" width="6" height="10" alt="Стрелка, показывает переход к другой странице"> <!-- Изображение? -->
+          <img class="breadcrumbs-img" src="images/catalog/breadcrumbs-arrow.svg" width="6" height="10"
+            alt="Стрелка, показывает переход к другой странице">
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Гостинницы</a>
+          <a class="breadcrumbs-link">Гостиницы</a>
         </li>
       </ul>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-        <h3 class="visually-hidden">Фильтры для выбора гостинниц</h3>
+        <h2 class="visually-hidden">Фильтры для выбора гостиниц</h2>
         <fieldset class="catalog-filter-group">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
@@ -87,7 +90,7 @@
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="control-input" type="radio" name="product-group" value="hotel" checked>Гостинница
+                <input class="control-input" type="radio" name="product-group" value="hotel" checked>Гостиница
               </label>
             </li>
             <li class="catalog-filter-item">
@@ -106,13 +109,13 @@
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="number" name="min-interval" placeholder="0">От
+              <label class="control-price">
+                <input class="control-input-interval" type="number" name="min-interval" placeholder="0">от
               </label>
             </li>
             <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="number" name="max-interval" placeholder="9000">До
+              <label class="control-price">
+                <input class="control-input-interval" type="number" name="max-interval" placeholder="9000">до
               </label>
             </li>
           </ul>
@@ -121,13 +124,15 @@
         <button class="button reset-button" type="reset">Сбросить</button>
       </form>
     </section>
-    <section class="search-title">
+    <section class="search-title-catalog">
       <h2 class="visually-hidden">Результат поиска</h2>
       <p class="search-title-result">Найдено гостиниц:
         <span class="search-result">38</span>
       </p>
       <select class="select-sorting" aria-label="Сортировка">
-        <option value="cheap">Сначала дешевое</option>  <!-- Указать 1 пункт или добавить например дороже, популярнее? -->
+        <option value="cheap">Сначала дешевые</option>
+        <option value="expensive">Сначала дорогие</option>
+        <option value="popular">Сначала популярные</option>
       </select>
       <a class="search-sort-link button-dark" href="#">
         <span class="visually-hidden">Показать карточки</span>
@@ -141,49 +146,53 @@
       <ul class="hotel-list">
         <li class="hotel-card">
           <a class="hotel-card-link" href="#">
-            <img class="hotel-card-image" src="images/catalog/hotel-amara.jpg" width="300" height="212" alt="Небо в ущелье">
+            <img class="hotel-card-image" src="images/catalog/hotel-amara.jpg" width="300" height="212"
+              alt="Небо в ущелье">
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-            <p class="hotel-card-text">Гостинница</p>
-            <b class="hotel-card-price">От 4000 ₽</b> <!-- Символ рублей так или ставится амперсандом? -->
+            <p class="hotel-card-text">Гостиница</p>
+            <b class="hotel-card-price">От 4000 ₽</b>
           </a>
-          <a class="hotel-class-info" href="#">Подробнее</a>  <!-- Выводить ли Подробнее, Избранное и Рейтинг в отдельный блок, например div? -->
-          <button class="hotel-card-button">В избранное</button> <!-- Можно ли в li добавлять button? -->
+          <a class="hotel-class-info" href="#">Подробнее</a>
+          <button class="button hotel-card-button">В избранное</button>
           <img class="hotel-rating" src="images/catalog/stars-4.svg" width="140" height="37" alt="Рейтинг 4 звезды">
           <span class="hotel-rating-text">Рейтинг: 8,5</span>
         </li>
-        <li class="hotel-card"> <!-- для карточек товара лучше использовать список или div? -->
+        <li class="hotel-card">
           <a class="hotel-card-link" href="#">
-            <img class="hotel-card-image" src="images/catalog/hotel-villas.jpg" width="300" height="212" alt="Радуга в горах">
+            <img class="hotel-card-image" src="images/catalog/hotel-villas.jpg" width="300" height="212"
+              alt="Радуга в горах">
             <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
-            <p class="hotel-card-text">Гостинница</p>
+            <p class="hotel-card-text">Гостиница</p>
             <b class="hotel-card-price">От 5000 ₽</b>
           </a>
           <a class="hotel-class-info" href="#">Подробнее</a>
-          <button class="hotel-card-button hotel-card-current">В избранное</button>
+          <button class="button hotel-card-button hotel-card-current">В избранное</button>
           <img class="hotel-rating" src="images/catalog/stars-4.svg" width="140" height="37" alt="Рейтинг 4 звезды">
           <span class="hotel-rating-text">Рейтинг: 9,2</span>
         </li>
         <li class="hotel-card">
           <a class="hotel-card-link" href="#">
-            <img class="hotel-card-image" src="images/catalog/hotel-desert.jpg" width="300" height="212" alt="Горы на фоне голубого неба">
+            <img class="hotel-card-image" src="images/catalog/hotel-desert.jpg" width="300" height="212"
+              alt="Горы на фоне голубого неба">
             <h3 class="hotel-card-title">Desert Quail Inn</h3>
-            <p class="hotel-card-text">Гостинница</p>
+            <p class="hotel-card-text">Гостиница</p>
             <b class="hotel-card-price">От 2500 ₽</b>
           </a>
           <a class="hotel-class-info" href="#">Подробнее</a>
-          <button class="hotel-card-button">В избранное</button>
+          <button class="button hotel-card-button">В избранное</button>
           <img class="hotel-rating" src="images/catalog/stars-3.svg" width="140" height="37" alt="Рейтинг 3 звезды">
           <span class="hotel-rating-text">Рейтинг: 6,9</span>
         </li>
         <li class="hotel-card">
           <a class="hotel-card-link" href="#">
-            <img class="hotel-card-image" src="images/catalog/hotel-greentree.jpg" width="300" height="212" alt="Звездное небо в горах">
+            <img class="hotel-card-image" src="images/catalog/hotel-greentree.jpg" width="300" height="212"
+              alt="Звездное небо в горах">
             <h3 class="hotel-card-title">GreenTree Inn</h3>
-            <p class="hotel-card-text">Гостинница</p>
+            <p class="hotel-card-text">Гостиница</p>
             <b class="hotel-card-price">От 1500 ₽</b>
           </a>
           <a class="hotel-class-info" href="#">Подробнее</a>
-          <button class="hotel-card-button">В избранное</button>
+          <button class="button hotel-card-button">В избранное</button>
           <img class="hotel-rating" src="images/catalog/stars-2.svg" width="140" height="37" alt="Рейтинг 2 звезды">
           <span class="hotel-rating-text">Рейтинг: 5,0</span>
         </li>
@@ -210,7 +219,7 @@
           </a>
         </li>
         <li class="pagination-item">
-          <a class="pagination-link pagination-space">...</a> <!-- Как делается данный промежуток, ссылка или span? -->
+          <a class="pagination-link pagination-space">...</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">
@@ -219,7 +228,7 @@
         </li>
       </ol>
     </section>
-    <section class="subscribe">
+    <section class="subscribe subscribe-catalog">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <p class="subscribe-title">Подпишитесь на рассылку</p>
       <p class="subscribe-subtitle">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -260,4 +269,5 @@
     </section>
   </footer>
 </body>
+
 </html>
