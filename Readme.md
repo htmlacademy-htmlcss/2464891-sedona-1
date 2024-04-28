@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Aleksander Panyushkin](https://up.htmlacademy.ru/htmlcss-individual/1/user/2464891).
-* Наставник: [Александр Румянцев](https://htmlacademy.ru/profile/id1521451).
+* Наставник: [Максим Миронов](https://htmlacademy.ru/profile/id1336881).
 
 ---
 
