@@ -5,12 +5,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" type="image/png" href="/images/favicon.svg" sizes="32x32">
 </head>
 
 <body>
   <div class="container">
     <header class="hero">
-      <a class="logo" href="index.html" aria-current="page">
+      <a class="logo" aria-current="page">
         <img class="logo-img" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
       <nav class="nav">
@@ -31,16 +32,26 @@
           <li class="nav-item">
             <a class="nav-link nav-link-search" href="#">
               <span class="visually-hidden">Поиск.</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path
+                  d="M19.5 18.0083L15.8 14.3287C16.8 13.0359 17.5 11.3453 17.5 9.4558C17.5 5.08011 13.9 1.5 9.5 1.5C5.1 1.5 1.5 5.17956 1.5 9.55525C1.5 13.9309 5.1 17.511 9.5 17.511C11.3 17.511 13 16.9144 14.4 15.8204L18.1 19.5L19.5 18.0083ZM9.5 15.5221C6.2 15.5221 3.5 12.837 3.5 9.55525C3.5 6.27348 6.2 3.5884 9.5 3.5884C12.8 3.5884 15.5 6.27348 15.5 9.55525C15.5 12.837 12.8 15.5221 9.5 15.5221Z"
+                  fill="#000000" />
+              </svg>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link nav-link-favorites" href="#">
               <span class="visually-hidden">Избранное.</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path
+                  d="M9.9 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"
+                  fill="#000000" />
+              </svg>
               <span class="nav-favorites-number">12</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-button" href="#">Хочу сюда!</a>
+            <a class="nav-link nav-button js-modal-btn" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </div>
@@ -55,7 +66,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link breadcrumbs-link-hotel" href="#">Гостиницы</a>
+            <a class="breadcrumbs-link" href="#">Гостиницы</a>
           </li>
         </ol>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -126,7 +137,7 @@
               </label>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 0; width: 226px"> 
+                  <div class="range-bar" style="left: 0; width: 226px">
                     <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
@@ -312,7 +323,7 @@
           <li class="footer-contact-item">
             <a class="footer-contact-link" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Телеграмм.</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="40">
+              <svg xmlns="http://www.w3.org/2000/svg" width="47" height="40">
                 <path fill="currentColor"
                   d="M31.79 12.96 15.84 19.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.7l2.72-12.8c.28-1.12-.43-1.62-1.15-1.3Z" />
               </svg>
