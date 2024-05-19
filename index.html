@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -50,7 +51,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-button js-modal-btn" href="catalog.html">Хочу сюда!</a>
+            <a class="nav-link nav-button js-modal-btn" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </div>
@@ -176,7 +177,7 @@
             </a>
           </li>
         </ul>
-        <address>
+        <address class="address-phone">
           <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
         <a class="footer-logo-html" href="https://htmlacademy.ru/" target="_blank">
@@ -196,6 +197,7 @@
       <section class="modal-content">
         <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <span class="visually-hidden">Фильтр выбора дат пребывания в отеле и количества человек.</span>
           <div class="field-group">
             <label class="modal-text" for="first-date">Дата заезда:</label>
             <input class="modal-date" id="first-date" type="date" name="date" value="2020-04-27" required>
