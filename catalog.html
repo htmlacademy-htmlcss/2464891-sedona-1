@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
 </head>
 
 <body>
   <div class="container">
     <header class="hero">
-      <a class="logo" aria-current="page">
+      <a class="logo" href="index.html">
         <img class="logo-img" src="images/logo-sedona.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
       <nav class="nav">
@@ -66,7 +66,7 @@
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#">Гостиницы</a>
+            <a class="breadcrumbs-link">Гостиницы</a>
           </li>
         </ol>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -127,12 +127,12 @@
             <legend class="catalog-filter-title">Стоимость, &#8381;:</legend>
             <div class="catalog-filter-wrapper">
               <label class="control-price">
-                <input class="control-input-interval" type="number" name="min-price" placeholder="0" min="0">
+                <input class="control-input-interval" type="number" name="min-price" min="0" placeholder="0">
                 <span class="control-text">от</span>
               </label>
               <label class="control-price">
                 <input class="control-input-interval control-interval-next" type="number" name="max-price"
-                  placeholder="9000" max="9000">
+                  max="9000" placeholder="9000">
                 <span class="control-text">до</span>
               </label>
               <div class="range">
@@ -188,13 +188,13 @@
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
               <h3 class="hotel-item-title">Amara Resort & Spa</h3>
-              <img class="hotel-item-image" src="images/hotel/hotel-amara.jpg" width="300" height="212"
+              <img class="hotel-item-image" src="images/catalog/hotel/hotel-amara.jpg" width="300" height="212"
                 alt="Небо в ущелье.">
             </a>
             <div class="card-description">
               <p class="hotel-item-text">Гостиница</p>
               <b class="hotel-item-price">От 4000 &#8381;</b>
-              <a class="hotel-class-info" href="#">Подробнее</a>
+              <a class="hotel-item-info" href="#">Подробнее</a>
               <button class="hotel-item-button">В избранное</button>
               <div class="stars">
                 <span class="rating-star"></span>
@@ -208,13 +208,13 @@
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
               <h3 class="hotel-item-title">Villas at Poco Diablo</h3>
-              <img class="hotel-item-image" src="images/hotel/hotel-villas.jpg" width="300" height="212"
+              <img class="hotel-item-image" src="images/catalog/hotel/hotel-villas.jpg" width="300" height="212"
                 alt="Радуга в горах.">
             </a>
             <div class="card-description">
               <p class="hotel-item-text">Гостиница</p>
               <b class="hotel-item-price">От 5000 &#8381;</b>
-              <a class="hotel-class-info" href="#">Подробнее</a>
+              <a class="hotel-item-info" href="#">Подробнее</a>
               <button class="hotel-item-button hotel-button-current">В избранном</button>
               <div class="stars">
                 <span class="rating-star"></span>
@@ -228,13 +228,13 @@
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
               <h3 class="hotel-item-title">Desert Quail Inn</h3>
-              <img class="hotel-item-image" src="images/hotel/hotel-desert.jpg" width="300" height="212"
+              <img class="hotel-item-image" src="images/catalog/hotel/hotel-desert.jpg" width="300" height="212"
                 alt="Горы на фоне голубого неба.">
             </a>
             <div class="card-description">
               <p class="hotel-item-text">Гостиница</p>
               <b class="hotel-item-price">От 2500 &#8381;</b>
-              <a class="hotel-class-info" href="#">Подробнее</a>
+              <a class="hotel-item-info" href="#">Подробнее</a>
               <button class="hotel-item-button">В избранное</button>
               <div class="stars">
                 <span class="rating-star"></span>
@@ -247,13 +247,13 @@
           <li class="hotel-item">
             <a class="hotel-item-link" href="#">
               <h3 class="hotel-item-title">GreenTree Inn</h3>
-              <img class="hotel-item-image" src="images/hotel/hotel-greentree.jpg" width="300" height="212"
+              <img class="hotel-item-image" src="images/catalog/hotel/hotel-greentree.jpg" width="300" height="212"
                 alt="Звездное небо в горах.">
             </a>
             <div class="card-description">
               <p class="hotel-item-text">Гостиница</p>
               <b class="hotel-item-price">От 1500 &#8381;</b>
-              <a class="hotel-class-info" href="#">Подробнее</a>
+              <a class="hotel-item-info" href="#">Подробнее</a>
               <button class="hotel-item-button">В избранное</button>
               <div class="stars">
                 <span class="rating-star"></span>
@@ -351,6 +351,78 @@
       </section>
     </footer>
   </div>
+  <div class="modal-container js-modal">
+    <div class="modal">
+      <button class="modal-close-button js-modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <span class="visually-hidden">Фильтр выбора дат пребывания в отеле и количества человек.</span>
+          <div class="field-group">
+            <label class="modal-text" for="first-date">Дата заезда:</label>
+            <input class="modal-date" id="first-date" type="text" name="first-date" value="27 апреля 2020"
+              placeholder="Заезд" required>
+            <span class="modal-info">Мы не можем отправить вас в прошлое.</span>
+          </div>
+          <div class="field-group field-group-end">
+            <label class="modal-text" for="end-date">Дата выезда:</label>
+            <input class="modal-date" id="end-date" type="text" name="end-date" value="1 сентября 2023"
+              placeholder="Выезд" required>
+            <span class="modal-info modal-date-info">На эти даты есть свободные номера. Пока есть.</span>
+          </div>
+          <div class="modal-ages">
+            <label class="modal-text" for="adult">Взрослые:</label>
+            <div class="modal-people-control">
+              <button class="less-button" type="button">
+                <span class="visually-hidden">Уменьшить количество.</span>
+                <svg width="14" height="2" viewBox="-3 -9 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" fill="currentColor" />
+                </svg>
+              </button>
+              <input class="ages-number" type="number" name="adult" id="adult" value="2">
+              <button class="more-button" type="button">
+                <span class="visually-hidden">Прибавить количество.</span>
+                <svg width="14" height="14" viewBox="-3 -3 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+            <div class="clue">
+              <label class="modal-text modal-child" for="child">Дети:</label>
+              <button class="clue-button" type="button">
+                <span class="visually-hidden">Дополнительная информация.</span>
+                <svg width="26" height="26" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                  <path d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white" />
+                </svg>
+              </button>
+              <span class="clue-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.
+                Дети до 6 лет размещаются бесплатно.</span>
+            </div>
+            <div class="modal-child-control">
+              <button class="less-button" type="button">
+                <span class="visually-hidden">Уменьшить.</span>
+                <svg width="14" height="2" viewBox="-3 -9 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0L0 2L14 2V0L0 0Z" fill="currentColor" />
+                </svg>
+              </button>
+              <input class="ages-number" type="number" name="child" id="child" value="2">
+              <button class="more-button" type="button">
+                <span class="visually-hidden">Прибавить.</span>
+                <svg width="14" height="14" viewBox="-3 -3 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 6H8V0H6V6H0V8H6V14H8V8H14V6Z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <button class="modal-button-search" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

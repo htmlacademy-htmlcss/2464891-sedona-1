@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
 </head>
 
 <body>
@@ -200,12 +200,14 @@
           <span class="visually-hidden">Фильтр выбора дат пребывания в отеле и количества человек.</span>
           <div class="field-group">
             <label class="modal-text" for="first-date">Дата заезда:</label>
-            <input class="modal-date" id="first-date" type="date" name="date" value="2020-04-27" required>
+            <input class="modal-date" id="first-date" type="text" name="first-date" value="27 апреля 2020"
+              placeholder="Заезд" required>
             <span class="modal-info">Мы не можем отправить вас в прошлое.</span>
           </div>
           <div class="field-group field-group-end">
             <label class="modal-text" for="end-date">Дата выезда:</label>
-            <input class="modal-date" id="end-date" type="date" name="date" value="2023-09-01" required>
+            <input class="modal-date" id="end-date" type="text" name="end-date" value="1 сентября 2023"
+              placeholder="Выезд" required>
             <span class="modal-info modal-date-info">На эти даты есть свободные номера. Пока есть.</span>
           </div>
           <div class="modal-ages">
