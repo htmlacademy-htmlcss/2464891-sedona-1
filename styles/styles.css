@@ -839,7 +839,7 @@ body {
   opacity: 0;
 }
 
-.control-input[type="checkbox"]:checked ~ .control-mark::before {
+.control-input:checked ~ .control-mark::before {
   content: "";
   position: absolute;
   top: 5px;
