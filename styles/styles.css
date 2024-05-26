@@ -1089,8 +1089,8 @@ body {
 
 .reset-button:disabled {
   pointer-events: none;
-  background-color: #e5e5e5;
   color: #ffffff;
+  opacity: 10%;
 }
 
 .search-catalog {
